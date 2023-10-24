@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primaryColor: #E5B143;
+    --secondaryColor: #333;
+    --terciaryColor: #FDF6E3;
+    --quaternaryColor: #0000ff;
+}
+
+/* Style Header */
+header{
+    background-color: var(--primaryColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    margin-top: 1vh;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 2vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    text-align: center;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+#active{
+    background-color: var(--secondaryColor);
+    padding: 1vh;
+    border-radius: 2vh;
+    color: var(--primaryColor);
+}
+
+header a:hover{
+    background-color: var(--terciaryColor);
+    padding: 1vh;
+    border-radius: 2vh;
+}
+
+/* Style Main */
+
+main{
+    background-color: var(--terciaryColor);
+}
+
+section:nth-child(1){
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section:nth-child(1) h2{
+    margin: 2vh 0;
+}
+
+section:nth-child(1) article{
+    background-color: var(--primaryColor);
+    margin: 1vh 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2vh;
+    padding: 2vh 0vw;
+}
+
+section:nth-child(1) article img{
+    width: 100%;
+    height: 35vh;
+    min-height: 20vh;
+    max-height: 30vh;
+    object-fit: cover;
+}
+
+.dish_container{
+    width: 70%;
+}
+
+.dish_container h4{
+    font-size: .9rem;
+}
+.dish_container p{
+    font-size: .8rem;
+}
+table{
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table td, tr, th{
+    border: solid var(--secondaryColor) 1px;
+}
+
+td,tr{
+    padding: .5vh;
+}
+
+th{
+    background-color: var(--primaryColor);
+    padding: 1vh;
+}
+
+section:nth-child(3) div, section:nth-child(2) div{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+section:nth-child(3) ul{
+    list-style-type: disc;
+    color: var(--quaternaryColor);
+    margin-left: 4vw;
+    padding: 2vh 0;
+}
+
+/* Style footer */
+
+footer{
+    background-color: var(--primaryColor);
+    height: 100%;
+}
+
+footer h2{
+    width: 100%;
+    text-align: center;
+    margin-top: 1vh;
+}
+
+footer h4{
+    text-align: center;
+    margin: 1vh 0;
+}
+
+form{
+    text-align: center;
+    margin: 1vh 0;
+}
+
+input[type="email"]{
+    padding: .5vh 0;
+    border-radius: 1vh;
+}
+
+input[type="submit"]{
+    padding: 1vh;
+    border-radius: 2vh;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border: none;
+}
+footer a{
+    padding: 1vh 0;
+    display: block;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px){
+    /* Style header  nav */
+
+    nav ul{
+        flex-direction: row;
+    }
+
+    /* style main */
+    main:not(section:nth-child(1)){
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+    section:nth-child(1) article{
+        width: 30%;
+    }
+    section:nth-child(1) article img{
+        width: 100%;
+        height: 20vh;
+        max-height: 20vh;
+    }
+    section:nth-child(1) article p{
+        width: 95%;
+    }
+    section:nth-child(2){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    section:nth-child(2) h2{
+        width: 100%
+    }
+    section:nth-child(3){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+    section:nth-child(3) h2{
+        width: 100%
+    }
+    section:nth-child(3) ul{
+        width: 100%;
+        list-style-position: inside;
+    }
+    /* Style footer */
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    footer h2{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    section:nth-child(1) article img{
+        width: 100%;
+        height: 50vh;
+    }
+}
